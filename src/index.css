@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --canvas: #FBFBF9;
+    --charcoal: #1F2421;
+    --olive: #4A5D3E;
+    --olive-dark: #38462F;
+    --olive-light: #607452;
+    --olive-soft: #EDF1E8;
+    --border: #E5E7DF;
+  }
+
+  body {
+    background-color: #FBFBF9;
+    color: #1F2421;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Print Styles for pristine Resume PDF output */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
